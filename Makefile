@@ -68,7 +68,8 @@ docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/pigt.rst
 	rm -f docs/modules.rst
 	sphinx-apidoc -o docs/ pigt
-	$(MAKE) -C docs clean
+	$(MAKE) -C docs clean[Friday 4:54 PM] Bastiaan Evers
+export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
 
@@ -84,7 +85,9 @@ dist: clean ## builds source and wheel package
 	ls -l dist
 
 environment:
+	conda make install
 	mamba env create -f environment_dev.yaml --force
+	export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
 
 install: clean ## install the package to the active Python's site-packages
 	pip install -e .
