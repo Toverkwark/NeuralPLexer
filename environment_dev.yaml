@@ -7,9 +7,9 @@ channels:
   - bioconda
   - conda-forge
 dependencies:
-  - python >=3.8
+  - python=3.9
   - pip
-  - pytorch >=1.10.0
+  - pytorch=1.13.1
   - pytorch-cuda
   - biopython
   - prody
@@ -38,4 +38,3 @@ dependencies:
   - wandb
   - pip:
     - -r requirements.txt
-
