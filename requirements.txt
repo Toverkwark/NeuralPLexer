@@ -1,5 +1,6 @@
 pytorch-lightning <2.0.0
-torch-scatter
+torch-scatter==2.1.0
+torchvision==0.14.1
 fairscale
 mendeleev
 DLLogger @ git+https://github.com/NVIDIA/dllogger.git@0540a43971f4a8a16693a9de9de73c1072020769
